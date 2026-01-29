@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow AI - Master Your Attention</title>
+    <meta name="description" content="AI-powered focus assistant to help you plan tasks and achieve deep work.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            900: '#4c1d95',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom subtle animations */
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 0.6s ease-out forwards;
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-brand-100 selection:text-brand-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-card border-b border-slate-200/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-indigo-600 flex items-center justify-center text-white font-bold text-sm">F</div>
+                    <span class="font-semibold text-lg tracking-tight">FocusFlow AI</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Features</a>
+                    <a href="#how-it-works" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">How it Works</a>
+                    <a href="#" class="text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 px-4 py-2 rounded-full transition-all shadow-sm hover:shadow-md">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-brand-100/50 rounded-full blur-3xl -z-10 opacity-60"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-sm mb-8 animate-fade-in-up opacity-0">
+                <span class="flex h-2 w-2 rounded-full bg-brand-500"></span>
+                <span class="text-xs font-medium text-slate-600">v2.0 is now live</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-6 max-w-4xl mx-auto leading-tight animate-fade-in-up delay-100 opacity-0">
+                Silence the noise. <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-600">Master your flow.</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-200 opacity-0">
+                FocusFlow AI intelligently plans your day, blocks digital distractions, and orchestrates deep work sessions tailored to your energy levels.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up delay-300 opacity-0">
+                <button class="w-full sm:w-auto px-8 py-4 bg-slate-900 text-white font-medium rounded-full hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                    Start Focusing Free
+                </button>
+                <button class="w-full sm:w-auto px-8 py-4 bg-white text-slate-700 font-medium rounded-full border border-slate-200 hover:bg-slate-50 hover:border-slate-300 transition-all">
+                    View Demo
+                </button>
+            </div>
+
+            <!-- UI Mockup Placeholder -->
+            <div class="mt-20 relative mx-auto max-w-5xl animate-fade-in-up delay-300 opacity-0">
+                <div class="rounded-2xl border border-slate-200 bg-white/50 backdrop-blur-sm p-2 shadow-2xl">
+                    <div class="rounded-xl overflow-hidden bg-slate-50 aspect-[16/9] relative border border-slate-100 flex items-center justify-center group">
+                        <!-- Abstract Dashboard Representation -->
+                        <div class="absolute inset-0 bg-slate-50 flex flex-col p-8 gap-6">
+                            <!-- Header -->
+                            <div class="flex justify-between items-center pb-6 border-b border-slate-200">
+                                <div class="w-32 h-6 bg-slate-200 rounded-md"></div>
+                                <div class="flex gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-slate-200"></div>
+                                    <div class="w-8 h-8 rounded-full bg-slate-200"></div>
+                                </div>
+                            </div>
+                            <!-- Columns -->
+                            <div class="flex gap-6 h-full">
+                                <div class="w-1/4 h-full bg-white rounded-lg border border-slate-100 p-4 shadow-sm flex flex-col gap-3">
+                                    <div class="w-20 h-4 bg-brand-100 rounded mb-2"></div>
+                                    <div class="w-full h-16 bg-slate-50 rounded border border-slate-100"></div>
+                                    <div class="w-full h-16 bg-slate-50 rounded border border-slate-100"></div>
+                                    <div class="w-full h-16 bg-slate-50 rounded border border-slate-100"></div>
+                                </div>
+                                <div class="flex-1 h-full bg-white rounded-lg border border-slate-100 p-8 shadow-sm flex flex-col items-center justify-center relative overflow-hidden">
+                                    <div class="w-48 h-48 rounded-full border-4 border-brand-100 flex items-center justify-center relative">
+                                        <div class="text-4xl font-bold text-slate-800">24:59</div>
+                                        <div class="absolute inset-0 rounded-full border-t-4 border-brand-500 animate-spin" style="animation-duration: 30s;"></div>
+                                    </div>
+                                    <div class="mt-6 text-slate-500 font-medium">Deep Work Session</div>
+                                </div>
+                                <div class="w-1/4 h-full bg-white rounded-lg border border-slate-100 p-4 shadow-sm flex flex-col gap-3">
+                                    <div class="w-20 h-4 bg-green-100 rounded mb-2"></div>
+                                    <div class="w-full h-12 bg-slate-50 rounded border border-slate-100"></div>
+                                    <div class="w-full h-12 bg-slate-50 rounded border border-slate-100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">The modern world is designed to distract you.</h2>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        Notifications, endless feeds, and context switching are killing your ability to think deeply. The average knowledge worker is interrupted every 11 minutes.
+                    </p>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        FocusFlow AI acts as your digital gatekeeper. It understands your peak energy times and defends your attention when it matters most.
+                    </p>
+                    <div class="flex gap-8">
+                        <div>
+                            <div class="text-3xl font-bold text-slate-900">40%</div>
+                            <div class="text-sm text-slate-500 mt-1">Productivity Loss</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-slate-900">23m</div>
+                            <div class="text-sm text-slate-500 mt-1">To Refocus</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-100 to-white rounded-2xl transform rotate-3"></div>
+                    <div class="relative bg-slate-50 border border-slate-100 rounded-2xl p-8 shadow-lg">
+                        <div class="space-y-4">
+                            <!-- Chat Bubble Mockups -->
+                            <div class="flex gap-4 items-start p-4 bg-white rounded-xl shadow-sm border border-slate-100">
+                                <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-slate-900">High distraction detected</p>
+                                    <p class="text-slate-500 text-sm mt-1">You've switched tabs 14 times in 5 minutes. Suggest starting a 25m focus block?</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-4 items-start p-4 bg-white rounded-xl shadow-sm border border-slate-100 opacity-75">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-slate-900">Meeting conflict resolved</p>
+                                    <p class="text-slate-500 text-sm mt-1">Moved your deep work session to 10 AM (Peak Energy).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Intelligent features for deep work</h2>
+                <p class="text-lg text-slate-600">More than just a timer. A complete operating system for your attention.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600 mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Smart Task Planning</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Our AI analyzes your to-do list and calendar to create a realistic schedule, prioritizing high-impact work during your peak hours.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Adaptive Focus Timer</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Dynamically adjusts session lengths based on your focus depth. If you're in the zone, it extends the session; if you're struggling, it suggests a break.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Distraction Insights</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Visualize where your time actually goes. Identify patterns in interruptions and learn how to build better habits over time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-24 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">How it works</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+                <!-- Connector Line (Desktop) -->
+                <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-slate-200 to-transparent z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 bg-white rounded-full border-4 border-slate-100 flex items-center justify-center mb-6 shadow-sm">
+                        <span class="text-2xl font-bold text-brand-600">1</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Connect</h3>
+                    <p class="text-slate-600 max-w-xs">Sync your calendar and task managers. FocusFlow builds your optimal schedule.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 bg-white rounded-full border-4 border-slate-100 flex items-center justify-center mb-6 shadow-sm">
+                        <span class="text-2xl font-bold text-brand-600">2</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Focus</h3>
+                    <p class="text-slate-600 max-w-xs">Enter "Flow Mode". Websites are blocked, status is updated, and music starts.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 bg-white rounded-full border-4 border-slate-100 flex items-center justify-center mb-6 shadow-sm">
+                        <span class="text-2xl font-bold text-brand-600">3</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Improve</h3>
+                    <p class="text-slate-600 max-w-xs">Review your daily "Focus Score" and get personalized tips to work smarter.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-slate-900 z-0"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-900 to-slate-900 opacity-50 z-0"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Ready to find your flow?</h2>
+            <p class="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
+                Join 10,000+ professionals using FocusFlow AI to reclaim 2+ hours every single day.
+            </p>
+            <button class="px-8 py-4 bg-white text-slate-900 font-bold rounded-full hover:bg-slate-50 hover:scale-105 transition-all shadow-xl text-lg">
+                Get Started for Free
+            </button>
+            <p class="mt-4 text-sm text-slate-400">No credit card required • 14-day free trial</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 pt-16 pb-8 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-2 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-6 h-6 rounded bg-slate-900 text-white flex items-center justify-center text-xs font-bold">F</div>
+                        <span class="font-bold text-slate-900">FocusFlow AI</span>
+                    </div>
+                    <p class="text-sm text-slate-500">
+                        Designing the future of work by prioritizing human attention over digital noise.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider">Product</h4>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li><a href="#" class="hover:text-brand-600">Features</a></li>
+                        <li><a href="#" class="hover:text-brand-600">Integrations</a></li>
+                        <li><a href="#" class="hover:text-brand-600">Pricing</a></li>
+                        <li><a href="#" class="hover:text-brand-600">Changelog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider">Company</h4>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li><a href="#" class="hover:text-brand-600">About</a></li>
+                        <li><a href="#" class="hover:text-brand-600">Blog</a></li>
+                        <li><a href="#" class="hover:text-brand-600">Careers</a></li>
+                        <li><a href="#" class="hover:text-brand-600">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider">Legal</h4>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li><a href="#" class="hover:text-brand-600">Privacy</a></li>
+                        <li><a href="#" class="hover:text-brand-600">Terms</a></li>
+                        <li><a href="#" class="hover:text-brand-600">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-slate-400">© 2024 FocusFlow AI Inc. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="text-slate-400 hover:text-slate-600">
+                        <span class="sr-only">Twitter</span>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-slate-600">
+                        <span class="sr-only">GitHub</span>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
